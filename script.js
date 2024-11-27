@@ -106,13 +106,7 @@ document.querySelectorAll(".elem").forEach((elem) => {
 
     })
 
-    elem.addEventListener("mouseenter", (dets) => {
 
-        document.querySelector(".minicircle").style.height = '60px';
-        document.querySelector(".minicircle").style.width = '60px';
-        document.querySelector(".minicircle").style.backgroundColor = 'gray';
-
-    })
 
     elem.addEventListener("mousemove", (dets) => {
 
