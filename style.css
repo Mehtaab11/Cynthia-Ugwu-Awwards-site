@@ -68,7 +68,7 @@ body {
 .nav a {
   color: #fff;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   text-decoration: none;
 }
 
@@ -192,6 +192,7 @@ body {
 }
 
 .elem img {
+  border-radius: 6px;
   pointer-events: none;
   opacity: 0;
   position: absolute;
@@ -238,8 +239,17 @@ body {
   border-radius: 1000px;
   text-decoration: none;
   border: 1px solid #fff;
+  transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
   color: #fff;
 }
+
+.textabout a:hover {
+  background-color: #fff;
+  font-weight: 500;
+  color: black;
+}
+
+
 
 .subscribe {
   background-color: black;
@@ -296,7 +306,6 @@ body {
   }
   .nav h4 {
     font-weight: 100;
-
     font-size: 12px;
   }
   #secondh1 {
@@ -314,12 +323,15 @@ body {
   }
   .headerfooter a {
     font-size: 2.4vw;
+    bottom: 20%;
   }
   .circle {
     height: 14px;
     width: 14px;
     font-size: 10px;
   }
+
+
 
   .second {
     padding-top: 100px;
