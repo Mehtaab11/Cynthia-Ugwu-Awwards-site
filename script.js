@@ -131,45 +131,29 @@ document.querySelectorAll(".elem").forEach((elem) => {
 
 })
 
-function timeChange(){
-    
-let now = new Date()
-let hours = String(now.getHours()).padStart(2, "0");
-let minutes = String(now.getMinutes()).padStart(2, "0");
-
-let year = now.getFullYear()
-
-const formattedTime = `${hours} : ${minutes}`
-const formattedYear = ` &copy; ${year}`
-
-
-document.querySelector(".time").innerHTML = formattedTime;
-document.querySelector(".year").innerHTML = formattedYear;
-
-console.log(formattedTime, formattedYear);
-
-setInterval(() => {
-
-    let now = new Date()
+function formatTimeAndYear() {
+    let now = new Date();
     let hours = String(now.getHours()).padStart(2, "0");
     let minutes = String(now.getMinutes()).padStart(2, "0");
+    let year = now.getFullYear();
 
-    let year = now.getFullYear()
+    const formattedTime = `${hours} : ${minutes}`;
+    const formattedYear = ` &copy; ${year}`;
 
-    const formattedTime = `${hours} : ${minutes}`
-    const formattedYear = ` &copy; ${year}`
-
-
-    document.querySelector(".time").innerHTML = formattedTime;
-    document.querySelector(".year").innerHTML = formattedYear;
-
-    console.log(formattedTime, formattedYear);
-
-}, 60000);
+    return { formattedTime, formattedYear };
 }
 
+function updateTime() {
+    const { formattedTime, formattedYear } = formatTimeAndYear();
+    document.querySelector(".time").innerHTML = formattedTime;
+    document.querySelector(".year").innerHTML = formattedYear;
+    console.log(formattedTime, formattedYear);
+}
 
-timeChange();
+updateTime();
+
+setInterval(updateTime, 60000);
+
 mouseSkew();
 mousemoveanim();
 firstPageAnim();
