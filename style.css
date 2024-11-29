@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'General Sans';
-  src: url(/fonts/GeneralSans-Regular.otf) format('opentype');
+  font-family: "General Sans";
+  src: url(/fonts/GeneralSans-Regular.otf) format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -249,8 +249,6 @@ body {
   color: black;
 }
 
-
-
 .subscribe {
   background-color: black;
   color: #fff;
@@ -304,6 +302,10 @@ body {
 }
 
 @media only screen and (max-width: 575px) {
+  .minicircle {
+    opacity: 0;
+  }
+
   .nav a {
     font-size: 14px;
     font-weight: 100;
